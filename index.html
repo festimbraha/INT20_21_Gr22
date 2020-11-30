@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Infinity Digital Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+
+    <style>
+      #foto{
+          border-radius: 50%;
+          
+      }
+      .logo{
+        color: rgb(36, 187, 214);
+      }
+
+      #foto{
+        width: 50px;
+        height: 50px;
+      }
+
+      #mySidenav a {
+        margin-top: 50px;
+        position: absolute;
+        left: -80px;
+        transition: 0.3s;
+        padding: 15px;
+        width: 100px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        border-radius: 0 5px 5px 0;
+      }
+      
+      #mySidenav a:hover {
+        left: 0;
+        
+      }
+  
+      #blog {
+        top: 80px;
+        background-color: rgb(21, 198, 230);
+      }
+      
+      #projects {
+        top: 140px;
+        background-color: rgb(21, 198, 230);
+      }
+
+
+    </style>
+    <script>
+    $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+        } else {
+            $(".item").addClass("active");
+        }
+    });
+});
+    </script>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="logo"><img src="logo.png" id="foto"><a href="index.html"></a></li>
+            <li class="item"><a href="home.html">Home</a></li>
+            <li class="item"><a href="about.html">About us</a></li>
+            <li class="item"><a href="services.html">Services</a></li>
+            <li class="item"><a href="contacts.html">Contacts</a></li>
+            </li>
+            <li class="item button"><a href="login.html">Log In</a></li>
+            <li class="item button secondary"><a href="signup.html">Sign Up</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+        
+        <a href="blog.html" id="blog">Blog</a>
+        <a href="projects.html" id="projects">Projects</a>
+        
+    </div>
+</body>
+</html>

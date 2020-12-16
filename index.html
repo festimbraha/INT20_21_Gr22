@@ -5,22 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Infinity Digital Agency</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="another.css">
+    
     <script
     src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous"></script>
-
     <style>
       #foto{
-          border-radius: 50%;
-          
-      }
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+    }
+
+      
       .logo{
         color: rgb(36, 187, 214);
       }
 
       #foto{
-        width: 50px;
+        width: 60px;
         height: 50px;
       }
 
@@ -37,20 +41,6 @@
         border-radius: 0 5px 5px 0;
       }
       
-      #mySidenav a:hover {
-        left: 0;
-        
-      }
-  
-      #blog {
-        top: 80px;
-        background-color: rgb(21, 198, 230);
-      }
-      
-      #projects {
-        top: 140px;
-        background-color: rgb(21, 198, 230);
-      }
 
 
     </style>
@@ -70,10 +60,10 @@
     <nav>
         <ul class="menu">
             <li class="logo"><img src="logo.png" id="foto"><a href="index.html"></a></li>
-            <li class="item"><a href="home.html">Home</a></li>
-            <li class="item"><a href="about.html">About us</a></li>
-            <li class="item"><a href="services.html">Services</a></li>
-            <li class="item"><a href="contacts.html">Contacts</a></li>
+            <li class="item button"><a href="home.html">Home</a></li>
+            <li class="item button"><a href="about_us.html">About us</a></li>
+            <li class="item button"><a href="services.html">Services</a></li>
+            <li class="item button"><a href="contacts.html">Contacts</a></li>
             </li>
             <li class="item button"><a href="login.html">Log In</a></li>
             <li class="item button secondary"><a href="signup.html">Sign Up</a></li>
@@ -81,16 +71,12 @@
         </ul>
     </nav>
 
-    <div id="mySidenav" class="sidenav">
-        
-        <a href="blog.html" id="blog">Blog</a>
-        <a href="projects.html" id="projects">Projects</a>
-    </div>
+    
 
     <section style="min-height: calc(100vh - 100px);  overflow: hidden; width: 100%;">
       <div style="width: 45%; float: left;">
         <div style="padding: 50px;">
-          <h1>Infinity Digital Agency</h1><br>
+          <h1 style="color:rgb(21, 168, 168)">Infinity Digital Agency</h1><br>
           <p>Infinity Digital Agency eshte kompani e cila merrret me zhvillimin e Website-eve dhe Softuereve
             te ndryshem. Ne kemi qene gjithmone ne sherbim te klienteve tane dhe ata asnjehere nuk jane 
             zhgenjyer me punen qe e kemi bere.
@@ -101,9 +87,105 @@
       </div>
       <div style="width:50%; text-align: center; float: right;" >
         <div style="padding: 50px 100px; ">
-        <img src="tech1.jpg" style="width: 520px"; height="370px;" id="logo1">
+        <img src="./images/comp.jpg" style="width: 520px"; height="370px;" id="logo1">
         </div>
       </div>	
     </section>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col50">
+          <h1>Themeluesit dhe Pronaret</h1>
+          <div class="row p0">
+            <div class="col50 center">
+              <div>
+                <img src="./images/festim.jpg" style="width: 250px; height:335px; border-radius:20px">
+              </div>
+            </div>
+            <div class="col50 center">
+              <div>
+                <img src="./images/EndritShaqiri.jpg" style="width: 100%; border-radius:20px">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col50">
+          <h1>Reviews</h1>
+          <div class="row p0">
+            <div class="col100">
+              <div>
+              <p> 		KBB Trepca, nje nga klientet tone:	   		
+                  <img style="margin: 10px;" src="./Images/trepca.jpg" width="200px" height="200px" align="left" id="trepca">"Ne kishim nevoje qe Klubi yne me emer ne Qytetin e Mitrovices te kishte nje Website. Dhe kontaktuam me Kompanine Infinity Digital Agency dhe u ndame shume
+                  te kenaqur me produktin final. I falenderojme per punen e bere Stafin e Infinity Digital Agency"
+  </p>
+              <a href="https://kbbtrepca.live/" target="_blanck"><button class="button button-blue" onclick="www.kbbtrepca.live">Read more</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+  </section>
+  <!--services------>
+  <section class="services">
+      <!--heading-->
+      <div class="services-heading">
+          <h2 style="color:rgb(18, 161, 161)">Shërbimet e faqes në internet të cilat ne i ofrojme</h2>
+          <p>Ky Website eshte Official i Kompanise tone, andaj per cfaredo pikepyetje, kerkesa dhe sherbime ju lutem na kontaktoni</p>
+      </div>
+      <!--box-container-------------->
+      <div class="box-container">
+          <!--box-1-------->
+          <div class="box">
+              <img src="images/login.svg">
+              <font>Log-In ne Website-in tone</font>
+              <p>Për të filluar procesin, ju lutemi hyni në sistemin tonë të sigurt. Gjithçka që ju nevojitet eshte qe te komunikoni me ne permes Log-in Formes, email-it ose edhe ne Social media. Ju faleminderit!
+              </p>
+              <!--btn------>
+              <a href="login.html">Log In</a>
+          </div>
+          <!--box-2-------->
+          <div class="box">
+              <img src="images/account view.svg">
+              <font>Sherbimet Tona</font>
+              <p>Sherbimet tona jane te gjitheaneshme. Duke filluar nga krijimi i Websiteve, menaxhimi dhe perkujdesja e tyre24 ore, krijimi i Aplikacioneve Mobile si dhe Social Media MArketing.</p>
+              <!--btn-------->
+              <a href="services.html">View</a>
+          </div>
+          <!--box-3-------->
+          <div class="box">
+              <img src="images/payment method.svg">
+              <font>Zgjidhe planin tuaj</font>
+              <p>Tek ne i keni te gjitha menyrat e pageses. Per te gjithe Klientet tane besnike qe i kemi, ofrojme zbritje te ndryshme 
+                ,por edhe sherbime shtese falas.
+              </p>
+              <!--btn-------->
+              <a href="#">Select Plan</a>
+          </div>
+          <!--box-4------>
+          <div class="box">
+              <img src="images/lock.svg">
+              <font>Mirembajtja</font>
+              <p>Ofrojme mirembajtje ne cdo moment dhe kohe. Stafi yne i kualifikuar ju mundesone qe te keni
+                qasja dhe bashkepunim ne cdo kohe. Mirembajtja 24/7.
+              </p>
+              <!--btn------>
+              <a href="login.html">Log In</a>
+          </div>
+          <!--box-1-------->
+          <div class="box">
+              <img src="images/document.svg">
+              <p>Gjithmone kemi pasur sukses ne punen me klientet tane. Andaj mos u hamendeso, Zgjedh <span style="color:rgb(18, 131, 131)">INFINITY DIGITAL AGENCY</span></p>
+              <!--btn------>
+              <a href="#">View</a>
+          </div>
+      </div>
+  </section>
+
+
 </body>
 </html>

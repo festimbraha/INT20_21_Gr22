@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/467ae1d3df.js" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+    <script> 
+        $(function(){
+          $("#footer").load("footer.html"); 
+        });
+        </script> 
+    <title>Document</title>
+    <style>
+
+.footer {
+  display: flex;
+  align-items: stretch;
+  background-color: #222;
+}
+
+.footer > div {
+  background-color:  #222;
+  color: white;
+  margin: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  line-height: 20px; /* Fontin e P */
+  font-size: 12px;
+}
+
+.social {
+  margin: 20px 0 0 0;
+}
+
+.social a{
+  padding: 0 2px;
+}
+
+.social a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: azure;
+}
+.social a span:hover{
+  background: #f12020;
+}
+
+.fas{
+  font-size: 1.3075rem;
+  background: #1a1a1a;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 2px;
+}
+.fas:hover{
+  background: #f12020;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .badi {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .badi2 {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color:rgb(211, 35, 35);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: -15px;
+}
+
+input[type=submit]:hover {
+  background-color: #ff0000;
+}
+
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <div class="divv" style="flex-grow: 1; flex: 30%;">
+        <h1 style="margin-bottom: 2px;">Rreth nesh</h1><hr style="border-top: 2px solid red;"><br>
+        <p>Infinity Digital Agency eshte kompani e cila merrret me zhvillimin e Website-eve dhe Softuereve
+          te ndryshem. Ne kemi qene gjithmone ne sherbim te klienteve tane dhe ata asnjehere nuk jane 
+          zhgenjyer me punen qe e kemi bere.</p>
+          <div class="social">
+            <a href="https://www.facebook.com/Infinity-Digital-Agency-105978701219535" target="_blank"><span class="fab fa-facebook-f"></span></a>
+            <a href="https://www.instagram.com/infinity_digitalagency/" target="_blank"><span class="fab fa-instagram"></span></a>
+            <a href="#" target="_blank"><span class="fab fa-twitter"></span></a>
+          </div>
+      </div>
+          
+        <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;">Adresa</h1><hr style="border-top: 2px solid red;">
+          <div class="div2" style="margin-top: 5px;">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">Prishtinë, Kosovë</span>
+            </div>
+      <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+383 44685122</span>
+            </div>
+       <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+383 49796484</span>
+            </div>
+      <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">infinitydigitalagency01@gmail.com</span>
+            </div>  
+          </div>
+        </div>
+      
+            <!-- Djathtas -->
+      
+        <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;">Na kontaktoni</h1><hr style="border-top: 2px solid red;">
+          <div class="form1">
+            <form action="/action_page.php">
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
+          
+              <input type="submit" value="Submit">
+            </form>
+          </div>       
+      </div>
+      
+      
+      </div>
+      
+      <div class="bottom" style="background-color: #222;padding-bottom: 10px;">
+        <center>
+                  <span style="color: white;" class="credit">Created By <a style="color: rgb(214, 42, 42);" href="https://www.facebook.com/Infinity-Digital-Agency-105978701219535">Infinity Digital Agency</a> | </span>
+                  <span style="color: white;" class="far fa-copyright"></span><span style="color: white;"> 2020 All rights reserved.</span>
+                </center>
+        </div>
+      
+</body>
+</html>

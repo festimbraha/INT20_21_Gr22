@@ -6,25 +6,32 @@
     <title>Infinity Digital Agency</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="another.css">
-    
+    <script src="https://kit.fontawesome.com/467ae1d3df.js" crossorigin="anonymous"></script>
     <script
     src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous"></script>
+    <script> 
+      $(function(){
+        $("#footer").load("footer.html"); 
+      });
+      </script> 
     <style>
       #foto{
         border-radius: 50%;
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
-
+    .badi{
+      background-color: rgb(26, 23, 23);
+    }
       
       .logo{
         color: rgb(36, 187, 214);
       }
 
       #foto{
-        width: 60px;
+        width: 50px;
         height: 50px;
       }
 
@@ -42,6 +49,130 @@
       }
       
 
+      .footer {
+  display: flex;
+  align-items: stretch;
+  background-color: #222;
+}
+
+.footer > div {
+  background-color:  #222;
+  color: white;
+  margin: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  line-height: 20px; /* Fontin e P */
+  font-size: 12px;
+}
+
+.social {
+  margin: 20px 0 0 0;
+}
+
+.social a{
+  padding: 0 2px;
+}
+
+.social a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: azure;
+}
+.social a span:hover{
+  background: #f12020;
+}
+
+.fas{
+  font-size: 1.3075rem;
+  background: #1a1a1a;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 2px;
+}
+.fas:hover{
+  background: #f12020;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .badi {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .badi2 {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color:rgb(211, 35, 35);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: -15px;
+}
+
+input[type=submit]:hover {
+  background-color: #ff0000;
+}
+
+.form1 {
+  border-radius: 5px;
+  background-color: #222;
+  padding: 20px;
+}
+
+.badi {
+  display: flex;
+  align-items: stretch;
+  background-color: #222;
+}
+
+.badi > div {
+  background-color:  #222;
+  color: white;
+  margin: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  line-height: 20px; /* Fontin e P */
+  font-size: 12px;
+}
 
     </style>
     <script>
@@ -60,25 +191,25 @@
     <nav>
         <ul class="menu">
             <li class="logo"><img src="logo.png" id="foto"><a href="index.html"></a></li>
-            <li class="item button"><a href="home.html">Home</a></li>
-            <li class="item button"><a href="about_us.html">About us</a></li>
-            <li class="item button"><a href="services.html">Services</a></li>
-            <li class="item button"><a href="contacts.html">Contact Us</a></li>
-            <li class="item button"><a href="projects.html">Projects</a></li>
+            <li class="item"><a href="home.html">Home</a></li>
+            <li class="item"><a href="about_us.html">About us</a></li>
+            <li class="item"><a href="services.html">Services</a></li>
+            <li class="item"><a href="contacts.html">Contact Us</a></li>
+            <li class="item"><a href="projects.html">Projects</a></li>
             </li>
-            <li class="item button"><a href="login.html">Log In</a></li>
-            <li class="item button secondary"><a href="signup.html">Sign Up</a></li>
+            <li class="item button"><a href="login.html">LOG IN</a></li>
+            <li class="item button secondary"><a href="signup.html">SIGN UP</a></li>
             <li class="toggle"><span class="bars"></span></li>
         </ul>
     </nav>
 
     
 
-    <section style="min-height: calc(100vh - 100px);  overflow: hidden; width: 100%;">
-      <div style="width: 45%; float: left;">
+    <div class="badi">
+      <div style="flex: 45%; flex-grow: 5;">
         <div style="padding: 50px;">
-          <h1 style="color:rgb(21, 168, 168)">Infinity Digital Agency</h1><br>
-          <p>Infinity Digital Agency eshte kompani e cila merrret me zhvillimin e Website-eve dhe Softuereve
+          <h1 style="color:rgb(21, 168, 168);font-size: 45px;line-height: 1; text-align: center;">Infinity Digital Agency</h1><br>
+          <p style="font-size: 15px; letter-spacing: 1px;text-align: center;">Infinity Digital Agency eshte kompani e cila merrret me zhvillimin e Website-eve dhe Softuereve
             te ndryshem. Ne kemi qene gjithmone ne sherbim te klienteve tane dhe ata asnjehere nuk jane 
             zhgenjyer me punen qe e kemi bere.
           </p>
@@ -86,57 +217,22 @@
           <a href="#services12" target="_blank"><button class="neon-btn btn one"></a>Me shume</button>
         </div>
       </div>
-      <div style="width:50%; text-align: center; float: right;" >
+      <div class="badi2" style="flex:50%; flex-grow: 5;" >
         <div style="padding: 50px 100px; ">
         <img src="./images/comp.jpg" style="width: 520px" alt="Fotoja ne Header"; height="370px;" id="logo1">
         </div>
       </div>	
-    </section>
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col50">
-          <h1>Themeluesit dhe Pronaret</h1>
-          <div class="row p0">
-            <div class="col50 center">
-              <div>
-                <img src="./images/festim.jpg" style="width: 250px; height:335px; border-radius:20px">
-              </div>
-            </div>
-            <div class="col50 center">
-              <div>
-                <img src="./images/EndritShaqiri.jpg" style="width: 100%; border-radius:20px">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col50">
-          <h1><u>Reviews</u></h1>
-          <div class="row p0">
-            <div class="col100">
-              <div>
-              <p> 		<abbr title="KBBTREPCA">KBB Trepca</abbr>, nje nga klientet tone:	   		
-                  <img style="margin: 10px;" src="./Images/trepca.jpg" width="200px" height="200px" align="left" id="trepca">"Ne kishim nevoje qe Klubi yne me emer ne Qytetin e Mitrovices te kishte nje Website. Dhe kontaktuam me Kompanine Infinity Digital Agency dhe u ndame shume
-                  te kenaqur me produktin final. I falenderojme per punen e bere Stafin e Infinity Digital Agency"
-  </p>
-              <a href="https://kbbtrepca.live/" target="_blanck"><button class="button button-blue" onclick="www.kbbtrepca.live">Read more</button></a>
-          
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
     </div>
 
+
+  
 
   </section>
   <!--services------>
   <section class="services">
       <!--heading-->
       <div class="services-heading">
-          <h2 style="color:rgb(18, 161, 161)">Shërbimet e faqes në internet të cilat ne i ofrojme</h2>
+          <h2 style="color:rgb(18, 161, 161)">Shërbimet qe ne i ofrojme</h2>
           <p>Ky Website eshte Official i Kompanise tone, andaj per cfaredo pikepyetje, kerkesa dhe sherbime ju lutem na kontaktoni</p>
       </div>
       <!--box-container-------------->
@@ -191,5 +287,64 @@
 <article>
   
 </article>
+
+<div class="footer">
+  <div class="divv" style="flex-grow: 1; flex: 30%;">
+  <h1 style="margin-bottom: 2px;">Rreth nesh</h1><hr style="border-top: 2px solid red;"><br>
+  <p>Infinity Digital Agency eshte kompani e cila merrret me zhvillimin e Website-eve dhe Softuereve
+    te ndryshem. Ne kemi qene gjithmone ne sherbim te klienteve tane dhe ata asnjehere nuk jane 
+    zhgenjyer me punen qe e kemi bere.</p>
+    <div class="social">
+      <a href="https://www.facebook.com/Infinity-Digital-Agency-105978701219535" target="_blank"><span class="fab fa-facebook-f"></span></a>
+      <a href="https://www.instagram.com/infinity_digitalagency/" target="_blank"><span class="fab fa-instagram"></span></a>
+      <a href="#" target="_blank"><span class="fab fa-twitter"></span></a>
+    </div>
+</div>
+    
+  <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;">Adresa</h1><hr style="border-top: 2px solid red;">
+    <div class="div2" style="margin-top: 5px;">
+      <div class="place">
+        <span class="fas fa-map-marker-alt"></span>
+        <span class="text">Prishtinë, Kosovë</span>
+      </div>
+<div class="phone">
+        <span class="fas fa-phone-alt"></span>
+        <span class="text">+383 44685122</span>
+      </div>
+ <div class="phone">
+        <span class="fas fa-phone-alt"></span>
+        <span class="text">+383 49796484</span>
+      </div>
+<div class="email">
+        <span class="fas fa-envelope"></span>
+        <span class="text">infinitydigitalagency01@gmail.com</span>
+      </div>  
+    </div>
+  </div>
+
+      <!-- Djathtas -->
+
+  <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;">Na kontaktoni</h1><hr style="border-top: 2px solid red;">
+    <div class="form1">
+      <form action="/action_page.php">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
+    
+        <input type="submit" value="Submit">
+      </form>
+    </div>       
+</div>
+
+
+</div>
+
+<div class="bottom" style="background-color: #222;padding-bottom: 10px;">
+  <center>
+            <span style="color: white;" class="credit">Created By <a style="color: rgb(214, 42, 42);" href="https://www.facebook.com/Infinity-Digital-Agency-105978701219535">Infinity Digital Agency</a> | </span>
+            <span style="color: white;" class="far fa-copyright"></span><span style="color: white;"> 2020 All rights reserved.</span>
+          </center>
+  </div>
+
 </body>
 </html>

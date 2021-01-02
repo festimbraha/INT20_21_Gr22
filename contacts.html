@@ -1,323 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-
-            background-image: url(Images/pexel.jpeg);
-            margin-top: 40px;
-            background-position: center;
-            background-size: cover;
-            font-family: sans-serif;
-        }
-
-        .regform {
-            width: 800px;
-            background-color: rgb(0, 0, 0, 0.6);
-            margin: auto;
-            color: #FFFFFF;
-            padding: 10px 0px 10px 0px;
-            text-align: center;
-            border-radius: 15px 15px 0px 0px;
-        }
-
-        .main {
-            background-color: rgb(0, 0, 0, 0.5);
-            width: 800px;
-            margin: auto;
-        }
-
-        form {
-            padding: 10px;
-
-        }
-
-        #name {
-            width: 100%;
-            height: 100px;
-
-        }
-
-        .name {
-            margin-left: 25px;
-            margin-top: 30px;
-            width: 125px;
-            color: white;
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .firstname {
-            position: relative;
-            left: 200px;
-            top: -37px;
-            line-height: 40px;
-            border-radius: 6px;
-            padding: 0 22px;
-            font-size: 16px;
-
-        }
-
-        .lastname {
-            position: relative;
-            left: 417px;
-            top: -80px;
-            line-height: 40px;
-            border-radius: 6px;
-            padding: 0 22px;
-            font-size: 16px;
-            color: #555;
-        }
-
-        .firstlabel {
-            position: relative;
-            color: #E5E5E5;
-            text-transform: capitalize;
-            font-size: 14px;
-            left: 203px;
-            top: -45px;
-        }
-
-        .lastlabel {
-            position: relative;
-            color: #E5E5E5;
-            text-transform: capitalize;
-            font-size: 14px;
-            left: 492px;
-            top: -76px;
-        }
-
-        .company {
-            position: relative;
-            left: 200px;
-            top: -37px;
-            line-height: 40px;
-            width: 480px;
-            border-radius: 6px;
-            padding: 0 22px;
-            font-size: 16px;
-            color: #555;
-        }
-
-        .email {
-            position: relative;
-            left: 200px;
-            top: -37px;
-            line-height: 40px;
-            width: 480px;
-            border-radius: 6px;
-            padding: 0 22px;
-            font-size: 16px;
-            color: #555;
-        }
-
-        .password{
-            position: relative;
-            left: 200px;
-            top: -37px;
-            line-height: 40px;
-            width: 480px;
-            border-radius: 6px;
-            padding: 0 22px;
-            font-size: 16px;
-            color: #555;
-        }
-        .Code {
-            position: relative;
-            left: 200px;
-            top: -37px;
-            line-height: 40px;
-            width: 95px;
-            border-radius: 6px;
-            padding: 0 22px;
-            font-size: 16px;
-            color: #555;
-        }
-
-        .number {
-            position: relative;
-            left: 200px;
-            top: -37px;
-            line-height: 40px;
-            width: 255px;
-            border-radius: 6px;
-            padding: 0 22px;
-            font-size: 16px;
-            color: #555;
-        }
-
-        .area-code {
-            position: relative;
-            color: #E5E5E5;
-            text-transform: capitalize;
-            font-size: 16px;
-            left: 54px;
-            top: -4px;
-        }
-
-        .phone-number {
-            position: relative;
-            color: #E5E5E5;
-            text-transform: capitalize;
-            font-size: 16px;
-            left: -100px;
-            top: -2px;
-        }
-
-        .option {
-            position: relative;
-            left: 200px;
-            top: -37px;
-            line-height: 40px;
-            width: 532px;
-            height: 40px;
-            border-radius: 6px;
-            padding: 0 22px;
-            font-size: 16px;
-            color: #555;
-            outline: none;
-            overflow: hidden;
-        }
-
-        .option option {
-            font-size: 20px;
-        }
-
-        #coustomer {
-            margin-left: 25px;
-            color: white;
-            font-size: 18px;
-
-        }
-
-        .radio {
-            display: inline-block;
-            padding-right: 70px;
-            font-size: 25px;
-            margin-left: 25px;
-            margin-top: 15px;
-            color: white;
-        }
-
-        .radio input {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            outline: none;
-        }
-
-        button {
-            background-color: #3BAF9F;
-            display: block;
-            margin: 20px 0px 0px 20px;
-            text-align: center;
-            border-radius: 12px;
-            border: 2px solid #366473;
-            padding: 14px 110px;
-            outline: none;
-            color: white;
-            cursor: pointer;
-            transition: 0.25px;
-        }
-
-        button:hover {
-            background-color: #5390F5;
-        }
-    </style>
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/467ae1d3df.js" crossorigin="anonymous"></script>
+    <style>
+         #foto{
+          border-radius: 50%;
+      }
+      .logo{
+        color: rgb(27, 217, 250);
+      }
+
+      #foto{
+        width: 50px;
+        height: 50px;
+      }
+      table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 80%;
+  border: 1px solid #ddd;
+  margin: auto;
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-remove {
+  color: red;
+}
+
+.trupi3{
+            background: white;
+            
+            display: flex;
+            align-items: stretch;
+            background-color:white;
+        }
+  .trupi3 > div {
+  background-color: white;
+  color: white;
+  margin: 10px;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 75px;
+}
+@media (max-width: 800px) {
+  .trupi3 {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+.about-section{
+    background: url(logo.png) no-repeat left;
+    background-size: 50%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+}
+
+.inner-container{
+    width: 50%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text1{
+    font-size: 13px;
+    color: #000000;
+    line-height: 30px;
+    text-align: justify;
+    
+    margin-top: 50px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+    </style>
 </head>
-
 <body>
-    <div class="regform">
-        <h1 style="outline-style: outset">
-            Formular kontakti</h1>
-    </div>
-    <div class="main">
+    <nav>
+        <ul class="menu"><!--Menu-->
+            <li class="logo"><img src="logo.png" id="foto"><a href="index.html"></a></li>
+            <li class="item"><a href="index.html">Home</a></li>
+            <li class="item"><a href="about_us.html">About us</a></li>
+            <li class="item"><a href="services.html">Services</a></li>
+            <li class="item"><a href="contacts.html">Contact Us</a></li>
+            <li class="item"><a href="projects.html">Projects</a></li>
+            </li>
+            <li class="item button"><a href="login.html">LOG IN</a></li>
+            <li class="item button secondary"><a href="signup.html">SIGN UP</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
 
-        <form method="POST">
-            <div id="name">
-                <h2 class="name">
-                    Emri dhe Mbiemri </h2>
-                <input class="firstname" type="text" name="first_name"><br>
-                <label class="firstlabel">Emri</label>
-                <input class="lastname" type="text" name="last_name"><br>
-                <label class="lastlabel">Mbiemri</label>
+<br>
+
+
+<div class="trupi3">
+        <div style="flex-grow: 5; flex: 50%;">
+            <div style="background-color: white;" class="form1">
+                <form action="/action_page.php">
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                   
+                  <div style="margin-top: -20px;">
+                  
+                      <input id="fname" type="email" name="email" placeholder="Your email..">
+                  </div>    
+
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
+
+                  <div style="margin-top: -35px;">
+                  <select class="option" name="subject">
+                    <option disabled="disabled" selected="selected">Per cfare sherbimi keni nevoje</option>
+                    <option>Website</option>
+                    <option>Aplikacion mobil</option>
+                    <option>Social Media Marketing</option>
+                </select>
             </div>
-            <h2 class="name">
-                Kompania </h2>
-            <input class="company" type="text" name="company">
-            <h2 class="name">
-                Email</h2>
-            <input class="email" type="email" name="email">
-            <h2 class="name">
-                Password</h2>
-            <input class="password" type="password" name="password">
 
-            <h2 class="name">
-                Telefoni</h2>
-            <input class="Code" type="text" name="area_code">
-            <label class="area-code">Area Code</label>
-            <input class="number" type="text" name="phone">
-            <label class="phone-number">Phone Number</label>
-
-
-            <h2 class="name">
-                Subject</h2>
-            <select class="option" name="subject">
-                <option disabled="disabled" selected="selected">Per cfare sherbimi keni nevoje</option>
-                <option>Website</option>
-                <option>Aplikacion mobil/option>
-                <option>Social Media Marketing</option>
-            </select>
-
-
-
-            <h2 id="coustomer">
-                A eshte hera e pare qe na kontaktoni</h2>
-            <label class="radio">
+                <div style="margin-top: -25px;">
+                <p style="color: black; font-size: 15px;">
+                A eshte hera e pare qe na kontaktoni</p>
+            <div style="margin-top: -45px;">
+                <label class="radio">
                 <input class="radio-one" type="radio" checked="checked" name="rdiobtn">
                 <span class="checkmark"></span>
-                Po
+                <span style="color: black;">Po</span>
             </label>
 
-            <label class="radio">
+            <label style="margin-left: 20px;" class="radio">
                 <input class="radio-two" type="radio" name="rdiobtn">
                 <span class="checkmark"></span>
-                Jo
-            </label>
-
-            <br>
-
-            <h3 style="color:rgb(35, 190, 201); margin-left: 20px;">Prej nga keni degjuar per ne</h3>
-            <form action="#">
-                <label class = "checkbox" style="color:white; margin-left: 20px;">
-                    <input type="checkbox" name="checkbox" id="checkbox">
-                    Ne rrjetet sociale
-                </label>
-                <label class = "checkbox" style="color:white">
-                    <input type="checkbox" name="checkbox" id="checkbox">
-                    Nga dikush i afert
-                </label>
-                <label class = "checkbox" style="color:white">
-                    <input type="checkbox" name="checkbox" id="checkbox">
-                    Nga bizneset bashkepunuese
-                </label>
-            </form>
-
-            <button type="submit">Dergo</button>
+                <span style="color: black;">Jo</span>
+            </label></div>
+        </div>
+                  <input type="submit" value="Submit">
+                </form>
+              </div>             
+        </div>
 
 
-        </form>
+    <div style="flex-grow: 5; flex: 50%; background-color: white;color: black; ">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.494341265589!2d21.16540871546556!3d42.65087867916838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ec23aa88157%3A0xcea579714221de76!2sQendra%20tregtare%2C%20Hyzri%20Talla%2C%20Prishtin%C3%AB!5e0!3m2!1sen!2s!4v1609606984344!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>    </div>
+</div>
+
+
+
+
+
+<div style="margin-top: -150px;" class="about-section">
+    <div class="inner-container">
+        <p class="text1">
+            Infinity Digital Agency eshte kompani e cila merrret me zhvillimin e Website-eve dhe Softuereve te ndryshem. Ne kemi qene gjithmone ne sherbim te klienteve tane dhe ata asnjehere nuk jane zhgenjyer me punen qe e kemi bere.        </p>
+            
+            
+            <div class="div2" style="margin-top: 5px;">
+                <div class="place">
+                  <span style="color: white;" class="fas fa-map-marker-alt"></span>
+                  <span class="text">Qendra Tregtare nr.17, Prishtinë</span>
+                </div>
+          <div class="email">
+                  <span style="color: white;" class="fas fa-envelope"></span>
+                  <span class="text">infinitydigitalagency01@gmail.com</span>
+                </div>  
+              </div>
+        
+            <div class="skills">
+
+            <div class="social">
+                <a href="https://www.facebook.com/Infinity-Digital-Agency-105978701219535" target="_blank"><span class="fab fa-facebook-f"></span></a>
+                <a href="https://www.instagram.com/infinity_digitalagency/" target="_blank"><span class="fab fa-instagram"></span></a>
+                <a href="#" target="_blank"><span class="fab fa-twitter"></span></a>
+              </div>
+        </div>
+
     </div>
-</body>
+</div>
 
+
+
+
+
+
+
+
+<div>
+    <table>
+        <tr>
+          <th style="width:30%">Orari i punës</th>
+          <th>E hëne</th>
+          <th>E marte</th>
+          <th>E merkure</th>
+          <th>E enjte</th>
+          <th>E premte</th>
+          <th>E shtune</th>
+          <th>E diele</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td><i class="fa fa-remove"></i></td>
+          <td><i class="fa fa-check"></i></td>
+          <td><i class="fa fa-check"></i></td>
+          <td><i class="fa fa-check"></i></td>
+          <td><i class="fa fa-check"></i></td>
+          <td><i class="fa fa-check"></i></td>
+          <td><i class="fa fa-remove"></i></td>
+        </tr>
+      </table>
+</div>      <br><br>
+
+
+    <div class="footer">
+        <div class="divv" style="flex-grow: 1; flex: 30%;">
+        <h1 style="margin-bottom: 2px;">Rreth nesh</h1><hr style="border-top: 2px solid red;"><br>
+        <p>Infinity Digital Agency eshte kompani e cila merrret me zhvillimin e Website-eve dhe Softuereve
+          te ndryshem. Ne kemi qene gjithmone ne sherbim te klienteve tane dhe ata asnjehere nuk jane 
+          zhgenjyer me punen qe e kemi bere.</p>
+          <div class="social">
+            <a href="https://www.facebook.com/Infinity-Digital-Agency-105978701219535" target="_blank"><span class="fab fa-facebook-f"></span></a>
+            <a href="https://www.instagram.com/infinity_digitalagency/" target="_blank"><span class="fab fa-instagram"></span></a>
+            <a href="#" target="_blank"><span class="fab fa-twitter"></span></a>
+          </div>
+      </div>
+          
+        <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;">Adresa</h1><hr style="border-top: 2px solid red;">
+          <div class="div2" style="margin-top: 5px;">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">Prishtinë, Kosovë</span>
+            </div>
+      <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+383 44685122</span>
+            </div>
+       <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+383 49796484</span>
+            </div>
+      <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">infinitydigitalagency01@gmail.com</span>
+            </div>  
+          </div>
+        </div>
+      
+            <!-- Djathtas -->
+      
+        <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;">Na kontaktoni</h1><hr style="border-top: 2px solid red;">
+          <div class="form1">
+            <form action="/action_page.php">
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
+          
+              <input type="submit" value="Submit">
+            </form>
+          </div>       
+      </div>
+      
+      
+      </div>
+      
+      <div class="bottom" style="background-color: #222;padding-bottom: 10px;">
+        <center>
+                  <span style="color: white;" class="credit">Created By <a style="color: rgb(214, 42, 42);" href="https://www.facebook.com/Infinity-Digital-Agency-105978701219535">Infinity Digital Agency</a> | </span>
+                  <span style="color: white;" class="far fa-copyright"></span><span style="color: white;"> 2020 All rights reserved.</span>
+                </center>
+        </div>
+      
+</body>
 </html>

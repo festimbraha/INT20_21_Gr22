@@ -401,6 +401,16 @@ input[type=text], select, textarea {
   margin-bottom: 5px;
   resize: vertical;
 }
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  resize: vertical;
+}
 
 input[type=submit] {
   background-color:rgb(211, 35, 35);
@@ -422,6 +432,19 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+#foto{
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
 
+.logo{
+  color: rgb(36, 187, 214);
+}
+
+#foto{
+  width: 50px;
+  height: 50px;
+}
 
 

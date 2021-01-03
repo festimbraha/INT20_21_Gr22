@@ -52,6 +52,16 @@
 }
 
 
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+  font-size: 18px;
+}
+
 
 
 #lista::before {content: "•"; color: red}
@@ -136,7 +146,7 @@
           <div class="box">
               <img src="images/account view.svg">
               <font>Sherbimet Tona</font>
-              <p>Sherbimet tona jane te gjitheaneshme. Duke filluar nga krijimi i Websiteve, menaxhimi dhe perkujdesja e tyre24 ore, krijimi i Aplikacioneve Mobile si dhe Social Media MArketing.</p>
+              <p><abbr title="sherbimet"> Sherbimet </abbr>tona jane te gjitheaneshme. Duke filluar nga krijimi i Websiteve, menaxhimi dhe perkujdesja e tyre24 ore, krijimi i Aplikacioneve Mobile si dhe Social Media MArketing.</p>
               <!--btn-------->
               <a href="services.html">View</a>
           </div>
@@ -166,7 +176,7 @@
               <img src="images/lock.svg">
               <font>Mirembajtja</font>
               <p>Ofrojme mirembajtje ne cdo moment dhe kohe. Stafi yne i kualifikuar ju mundesone qe te keni
-                qasja dhe bashkepunim ne cdo kohe. Mirembajtja 24/7.
+                qasja dhe bashkepunim ne cdo kohe. <mark> Mirembajtja 24/7.</mark>
                 Munde te kontaktoni:
                 <li id="lista"><span>Ne numrin e Telefonit</span></li>
                 <li id="lista"><span>Ne zyren tone</span></li>
@@ -185,8 +195,41 @@
   </section>
 
 <article>
+
+  <div class="container">
+		<div class="grid-container">
+			<div class="grid-item">
+				<h1>Te dhenat tjera per Infinity Digital Agency</h1>
+			</div>
+			<div class="grid-item">
+				<table style="width: 100%; border-radius:5%; background-color:rgb(253, 82, 14)" border="2"  cellspacing="0" cellpadding="0";>
+					<tr>
+						<td>Stafi</td>
+						<td>4 Punetor</td>
+					</tr>
+					<tr>
+						<td>Objekti</td>
+						<td>120m2</td>
+					</tr>
+					<tr>
+						<td>Kontakte te vazhdueshme</td>
+						<td>Po</td>
+					</tr>
+					<tr>
+						<td>Backup</td>
+						<td>Yes</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
   
 </article>
+
+
+<div class="clear10">
+		<canvas id="footerCanvas" height="100" width="200" style="width: 100%; height: 10px;">
+	</div>
 
 <div class="footer">
   <div class="divv" style="flex-grow: 1; flex: 30%;">
@@ -245,6 +288,8 @@
             <span style="color: white;" class="far fa-copyright"></span><span style="color: white;"> 2020 All rights reserved.</span>
           </center>
   </div>
+
+  
 
 </body>
 </html>

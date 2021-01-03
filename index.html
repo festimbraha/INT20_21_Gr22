@@ -50,6 +50,14 @@
   line-height: 20px; /* Fontin e P */
   font-size: 12px;
 }
+
+
+
+
+#lista::before {content: "•"; color: red}
+#lista::before {content: "•"; color: red;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
     </style>
     <script>
     $(function() {
@@ -138,6 +146,17 @@
               <font>Zgjidhe planin tuaj</font>
               <p>Tek ne i keni te gjitha menyrat e pageses. Per te gjithe Klientet tane besnike qe i kemi, ofrojme zbritje te ndryshme 
                 ,por edhe sherbime shtese falas.
+                <h5 style="margin-left:50px;">Disa nga Bankat Partnere</h5>
+                <ol>
+
+                  <li>BKT</li>
+                  <ul>
+                    <li>Ne Shqiperi</li>
+                    <li>Ne Kosove</li>
+                  </ul>
+                  <li>TEB</li>
+                  <li>BPB</li>
+                </ol>
               </p>
               <!--btn-------->
               <a href="#">Select Plan</a>
@@ -148,6 +167,9 @@
               <font>Mirembajtja</font>
               <p>Ofrojme mirembajtje ne cdo moment dhe kohe. Stafi yne i kualifikuar ju mundesone qe te keni
                 qasja dhe bashkepunim ne cdo kohe. Mirembajtja 24/7.
+                Munde te kontaktoni:
+                <li id="lista"><span>Ne numrin e Telefonit</span></li>
+                <li id="lista"><span>Ne zyren tone</span></li>
               </p>
               <!--btn------>
               <a href="login.html">Log In</a>

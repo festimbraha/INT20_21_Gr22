@@ -1,95 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Infinity Digital Agency</title>
+	
+	<link rel="stylesheet" type="text/css" href="another.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
+	<script>
+		
+		function validateEmail(i) {
+			console.log("asd");
+			if(!checkEmail(i.value)){
+				$(i).css("background-color", "red");
+			}
+			else {
+				$(i).css("background-color", "lightgreen");
+			}
+		}
+		function validatePassowrd(i){
+			console.log(i.value.length);
+			if(i.value.length < 6)
+				$(i).css("background-color", "cyan");
+			else
+				$(i).css("background-color", "orange");
+		}
+	</script>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		body  {
+			background: url(images/prishtina_night.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			background-origin: padding-box;
+		}
+		#loginPanel {
+      border: 6px solid #fdfdfd90;
+			border-radius: 30px;
+			box-shadow: 0px 0px 2000px rgb(23, 195, 204);
+			background: #2c2e2e90;
+			background-image: url(./images/line.png), url(./images/backline.png);
+			background-size: 1%;
+		  	-webkit-animation-name: loginpanelbganimation; 
+		  	-webkit-animation-duration: 4s;
+		  	animation-name: loginpanelbganimation;
+		  	animation-duration: 3s;
+		  	background-position: 0;
+		}
+		#signInBTN {
+			background-image: -webkit-linear-gradient(left, rgb(226, 73, 12), rgb(0, 0, 0)); 
+			border: 1; padding: 5px 10px; color: white; 
+			font-weight: bold; 
+			font-size: 18px; 
+			text-shadow: 1px 1px 1px black;	
+		  -webkit-animation-name: btnsigninanimation; 
+		  -webkit-animation-duration: 4s; 
+		  animation-name: btnsigninanimation;
+		  animation-duration: 4s;
+		}
+		@-webkit-keyframes btnsigninanimation {
+	  		from {background-image: -webkit-linear-gradient(left, rgb(255, 20, 20)rgb(0, 0, 0)le);}
+  			to {background-image: -webkit-linear-gradient(left, rgb(0, 0, 0), rgb(255, 60, 0));}
+		}
+		@keyframes btnsigninanimation {
+	  		from {background-image: -webkit-linear-gradient(left, rgb(226, 73, 12), rgb(0, 0, 0));}
+  			to {background-image: -webkit-linear-gradient(left, rgb(0, 0, 0), rgb(226, 73, 12));}
+		}
+		@-webkit-keyframes loginpanelbganimation {
+	  		from {background-size: 1%;
+	  			background-position: 10px;}
+  			to {background-size: 5%;
+          background-position: 0px;}}
+          
+		@keyframes loginpanelbganimation {
+	  		from {background-size: 1%;
+	  			background-position: 10px;}
+  			to {background-size: 5%;
+  				background-position: 0px;}
+
+		}
+	</style>
+</head>
+<body>
+
+  <nav>
+    <ul class="menu">
+        <li class="logo"><a href="index.html" id="home"><img src="logo.png" id="foto"></a></li>
+        <li class="item"><a href="index.html">Home</a></li>
+        <li class="item"><a href="about_us.html">About us</a></li>
+        <li class="item"><a href="services.html">Services</a></li>
+        <li class="item"><a href="contacts.html">Contact Us</a></li>
+        <li class="item"><a href="projects.html">Projects</a></li>
+        </li>
+        <li class="item button"><a href="login.html">LOG IN</a></li>
+        <li class="item button secondary"><a href="signup.html">SIGN UP</a></li>
+        <li class="toggle"><span class="bars"></span></li>
+    </ul>
+</nav>
 
 
-<!DOCTYPE html> 
-<html> 
-    <head> 
-      <title>Infinity Digital Agency</title> 
+	<div class="clear100"></div>
+	<div class="row">
+		<div class="col25"></div>
+		<div class="col50">
+			<div id="loginPanel" class="center text-white">
+			<canvas id="kanvasi" width="230" height="60">Your browser does not support the HTML5 canvas tag.</canvas>
+				<form id="forma" action="#" method="POST" style="padding: 0 200px; ">
+					<label for="email">Email:</label><br/>
+					<input style="width: 100%;" autofocus type="email" id="email" name="email" placeholder="emrimbiemri@student.uni-pr.edu" required="required"  onkeyup="validateEmail(this);"><br/><br/>
+					<label for="password" >Password:</label><br/>
+					<input maxlength="50" style="width: 77%;" onkeyup="validatePassowrd(this)" type="password" id="password"  pattern=".{6,}" title="Me shume se 6 karaktere" name="password" placeholder="Password" required="required">
+					
+					<br/><br/>
+					<keygen name="key"></label>
 
-      <script>
-        if(typeof(Storage)!=='undefined'){
-            console.log('Code for localStorage / sessionStorage');
-            localStorage.setItem("fullname", "Filan Fisteku");
-            console.log(localStorage.getItem("fullname"));
-            localStorage.removeItem("fullname");
-    
-            // Code for localStorage / sessionStorage
-        } else {
-            // Sorry no Web Storage Support
-            console.log('Sorry no Web Storage Support');		
-        }
-    
-        if (localStorage.clickcount) {
-          localStorage.clickcount = Number(localStorage.clickcount) + 1;
-        } else {
-          localStorage.clickcount = 1;
-        }
-        console.log(localStorage.clickcount);
-    
-        if (sessionStorage.clickcount) {
-          sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
-        } else {
-          sessionStorage.clickcount = 1;
-        }
-        console.log(sessionStorage.clickcount);
-    
-    
-    </script>
-     </head> 
-    <body> 
-        
-       <h2>Find Your Location in below Map</h2> 
-        <button onclick="getlocation();"> Show Position</button> 
-        <div id="demo" style="width: 600px; height: 400px; margin-left: 200px;"></div> 
-       
-        <script src="https://maps.google.com/maps/api/js?sensor=false"> </script> 
-        
-        <script type="text/javascript"> 
-        function getlocation(){ 
-            if(navigator.geolocation){ 
-                navigator.geolocation.getCurrentPosition(showPos, showErr); 
-            }
-            else{
-                alert("Sorry! your Browser does not support Geolocation API")
-            }
-        } 
-        //Showing Current Poistion on Google Map
-        function showPos(position){ 
-            latt = position.coords.latitude; 
-            long = position.coords.longitude; 
-            var lattlong = new google.maps.LatLng(latt, long); 
-            var myOptions = { 
-                center: lattlong, 
-                zoom: 15, 
-                mapTypeControl: true, 
-                navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL} 
-            } 
-            var maps = new google.maps.Map(document.getElementById("demo"), myOptions); 
-            var markers = 
-            new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"}); 
-        } 
-
-        //Handling Error and Rejection
-             function showErr(error) {
-              switch(error.code){
-              case error.PERMISSION_DENIED:
-             alert("User denied the request for Geolocation API.");
-              break;
-             case error.POSITION_UNAVAILABLE:
-             alert("USer location information is unavailable.");
-            break;
-            case error.TIMEOUT:
-            alert("The request to get user location timed out.");
-            break;
-           case error.UNKNOWN_ERROR:
-            alert("An unknown error occurred.");
-            break;
-           }
-        }        </script> 
-    ->
-
-
-    
-    </body> 
-</html>     
-
- 
+				</form>
+				<input form="forma" type="submit" value="Sign In" id="signInBTN">
+				<input form="forma" type="reset" value="RESET">
+			</div>
+			<p class="center"><a class="text-white" href="index.html" style="text-decoration: none; letter-spacing: 2px; font-size: 18px; background: #00000099; padding: 10px;">Kthehu ne Fillim</a></p>
+		</div>
+		<div class="col25"></div>
+	</div>
+	<script type="text/javascript">
+		var ora = new Date().getHours();
+		if(ora >= 5 && ora < 17){
+			//dita
+			$("body").css("background", "url(images/prishtina_day.jpg) no-repeat center center fixed");
+		}
+		$("#showPassword").click(function(){
+			event.preventDefault();
+			if($("#password").attr("type") == "text"){
+				$("#password").attr("type","password");
+				$("#showPassword").children().removeClass("fa-eye-slash").addClass("fa-eye");
+			}
+			else {
+				$("#password").attr("type","text");
+				$("#showPassword").children().removeClass("fa-eye").addClass("fa-eye-slash");
+			}
+		});
+		var c = document.getElementById("kanvasi");
+		var ctx = c.getContext("2d");
+		ctx.font = "30px Arial";
+		ctx.fillStyle ="white";
+		ctx.fillText("    Infinity D.A",10,50);
+	</script>
+</body>
+</html>

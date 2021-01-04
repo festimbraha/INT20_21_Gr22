@@ -178,3 +178,26 @@ p {
         text-align: center;
     }
 }
+
+
+
+
+.row > .col25 {
+	width: 25%;
+}
+.row > .col50 {
+	width: 50%;	
+}
+
+.clear100 {
+	height: 100px;
+	clear: both;
+}
+
+.center {
+	text-align: center;
+}
+
+.text-white {
+	color: white !important;
+}

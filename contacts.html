@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/467ae1d3df.js" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous">
+    </script>
     <style>
          #foto{
           border-radius: 50%;
@@ -136,6 +142,7 @@ tr:nth-child(even) {
     </style>
 </head>
 <body>
+  
     <nav>
         <ul class="menu"><!--Menu-->
             <li class="logo"><img src="logo.png" id="foto"><a href="index.html"></a></li>
@@ -198,9 +205,11 @@ tr:nth-child(even) {
         </div>
 
 
-    <div style="flex-grow: 5; flex: 50%; background-color: white;color: black; ">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.494341265589!2d21.16540871546556!3d42.65087867916838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ec23aa88157%3A0xcea579714221de76!2sQendra%20tregtare%2C%20Hyzri%20Talla%2C%20Prishtin%C3%AB!5e0!3m2!1sen!2s!4v1609606984344!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>    </div>
-</div>
+    <div id="googleMap" style="flex-grow: 5; flex: 50%; background-color: white;color: black; ">
+      
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.494341265589!2d21.16540871546556!3d42.65087867916838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ec23aa88157%3A0xcea579714221de76!2sQendra%20tregtare%2C%20Hyzri%20Talla%2C%20Prishtin%C3%AB!5e0!3m2!1sen!2s!4v1609606984344!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>    </div> 
+      
+      </div>
 
 
 
@@ -209,8 +218,8 @@ tr:nth-child(even) {
 <div style="margin-top: -150px;" class="about-section">
     <div class="inner-container">
         <p class="text1">
-            Infinity Digital Agency eshte kompani e cila merrret me zhvillimin e Website-eve dhe Softuereve te ndryshem. Ne kemi qene gjithmone ne sherbim te klienteve tane dhe ata asnjehere nuk jane zhgenjyer me punen qe e kemi bere.        </p>
-            
+            Infinity Digital Agency eshte kompani e cila merrret me zhvillimin e Website-eve dhe Softuereve te ndryshem. Ne kemi qene gjithmone ne sherbim te klienteve tane dhe ata asnjehere nuk jane zhgenjyer me punen qe e kemi bere.              </p>
+            <p style="margin-top: -10px; width: 73%; padding-left: 5px; background-color: coral;" class="text1" id="largesia"><mark></mark></p>
             
             <div class="div2" style="margin-top: 5px;">
                 <div class="place">
@@ -327,4 +336,29 @@ tr:nth-child(even) {
         </div>
       
 </body>
+<script>
+  function merrLokacionin() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(tregoPozicionin);
+  } else { 
+    console.log("Geolocation is not supported by this browser.");
+  }
+}
+
+  function tregoPozicionin(position) {
+var QTX = 42.6487;
+var QTY = 21.1649;
+var distanca = Math.sqrt(Math.pow((QTX - position.coords.latitude), 2) + Math.pow((QTY - position.coords.longitude), 2));
+alert("Ju jeni larg nga zyret tona " + distanca.toFixed(3)*100 + " km" + mesazhi());
+
+function mesazhi(){
+if (distanca*100 < 50) {
+return(". Ejani na vizitoni!");  
+} else {
+  return(" .Mos ngurroni te na kontaktoni online.");
+}
+}
+}
+merrLokacionin();
+</script>
 </html>

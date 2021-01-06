@@ -173,7 +173,6 @@ tr:nth-child(even) {
                   </div>    
 
                   <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
-
                   <div style="margin-top: -35px;">
                   <select class="option" name="subject">
                     <option disabled="disabled" selected="selected">Per cfare sherbimi keni nevoje</option>
@@ -319,8 +318,18 @@ tr:nth-child(even) {
               <input type="text" id="fname" name="firstname" placeholder="Your name..">
           
               <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
-          
-              <input type="submit" value="Submit">
+              <form action="/action_page.php" method="get">
+                <label for="browser">Choose your browser from the list:</label>
+                <input list="browsers" name="browser" id="browser"> =<output name="browser" for="browsers"></output>
+                <datalist id="browsers">
+                  <option value="Edge">
+                  <option value="Firefox">
+                  <option value="Chrome">
+                  <option value="Opera">
+                  <option value="Safari">
+                </datalist>
+                <input type="submit">
+              </form>
             </form>
           </div>       
       </div>

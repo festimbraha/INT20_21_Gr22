@@ -134,7 +134,7 @@ body
 .services-box .box:nth-child(1) .ser-box:hover
 {
     background-image: 
-    linear-gradient(-45deg, #34b5bf 0%, #210c59 100%);
+    radial-gradient(-45deg, #34b5bf 0%, #210c59 100%);
 }
 
 

@@ -1,45 +1,280 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Infinity Digital Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="another.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/467ae1d3df.js" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="calc.js"></script>
 <style>
-#div1, #div2 {
+.kol{
+  display: flex;
+  align-items: stretch;
+}
+.columns {
   float: left;
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid black;
+  width: 48%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button12 {
+  background-color: rgb(13, 119, 138);
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.button12:hover{
+  background-color: rgb(7, 91, 105);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color:rgb(13, 119, 138);
+  border: solid 1px #c3c3c3;
+  width: 70%;
+  margin: auto;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+.contein{
+            width: 350px;
+            height: 350px;
+            background-color: rgb(13, 119, 138);
+            opacity: 0.9;
+            position: absolute;
+            padding: 20px 0px 0px 50px;
+            border-radius: 50px;
+            color: white;
+            left: 50%;
+            top: 65%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        input{
+            width: 70%;
+            padding: 5px;
+            margin-top: 0px;
+        }
+        input:focus{
+            outline: none;
+        }
+        @media (max-width: 800px) {
+  .contein {
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: -150px;
+  }
+}
+audio:focus {
+    outline: none;
 }
 </style>
-<script>
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-
-</script>
 </head>
 <body>
 
-<h2>Drag and Drop</h2>
-<p>Drag the image back and forth between the two div elements.</p>
+  <nav>
+    <ul class="menu">
+        <li class="logo"><a href="index.html" id="home"><img src="logo.png" id="foto"></a></li>
+        <li class="item"><a href="index.html">Home</a></li>
+        <li class="item"><a href="about_us.html">About us</a></li>
+        <li class="item"><a href="services.html">Services</a></li>
+        <li class="item"><a href="contacts.html">Contact Us</a></li>
+        <li class="item"><a href="projects.html">Projects</a></li>
+        <li class="item"><a href="others.html">Price List</a></li>
+        </li>
+        <li class="item button"><a href="login.html">LOG IN</a></li>
+        <li class="toggle"><span class="bars"></span></li>
+    </ul>
+</nav>
 
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="comp.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="180" height="180">
+<audio controls autoplay>
+  <source src="muz.mp3" type="audio/mpeg">
+</audio>
+
+<script> 
+  $(document).ready(function(){
+    $("#flip").click(function(){
+      $("#panel").slideToggle("slow");
+    });
+  });
+  </script>
+
+<div class="kol" style="position: relative;">
+  <div style="flex-grow: 5;" class="columns">
+    <ul class="price">
+      <li class="header">Basic / Frontend</li>
+      <div ondrop="drop(event)" ondragover="allowDrop(event)"><li>€ 300</li></div> 
+      <li>Host</li>
+      <li>Domain</li>
+      <li>Nje muaj mirembajtje</li>
+      <li>Backup</li>
+      <li class="grey"><a onclick="myFunction()" class="button12">Llogarit</a></li>
+    </ul>
+  </div>
+  
+  <div style="flex-grow: 5;" class="columns">
+    <ul class="price">
+      <li class="header" style="background-color:rgb(13, 119, 138)">Pro / Dynamic</li>
+      <div ondrop="drop(event)" ondragover="allowDrop(event)"><li>€ 600</li></div> 
+      <li>Host</li>
+      <li>Domain</li>
+      <li>Dy muaj mirembajtje</li>
+      <li>Backup</li>
+      <li class="grey"><a onclick="myFunction()" class="button12">Llogarit</a></li>
+    </ul>
+  </div>
+</div>
+<br>
+
+<div class="contein" id="MyDiv" style="display: none;">
+  <h1>Kalkulatori</h1>
+  <p style="color: red; font-size: 12px; margin-left: -25px;"><b>*Mundesh me i vendos vlerat me zvarritje(Drag&Drop)</b></p><br>
+  <p>Cmimi: <br> <input id="cmimi" type="number" onchange="llogarite()" oninput="myFunction1()"> €</p><br>
+          <p style="color:red; font-size: 12px; margin-top: -15px;" id="p01"></p>
+  <p>Mirembajtja: <br> <input id="miremb" type="number" onchange="llogarite()"> €</p><br>
+  <p>Zbritja: <br> <input id="zbritja" value="5" type="number" onchange="llogarite()"> %</p>
+  <h2 id="pagesa"></h2>
+</div>
+<script src="calc.js"></script>
+<br>
+
+
+<script>
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+  </script>
+
+<div id="flip">Me shume informata</div>
+<div id="panel">Cmimet e mesiperme jane te diskutushme, varesisht nga permbajtja e website-s qe ju doni. Mirembajtja per pakon "BASIC" kushton
+                50€, ndersa per pakon "PRO" kushton 150€. <br>Klientet tane gjithmone jane ndare shume te kenaqur me ne. Behu edhe ti nje nga ata.
+                Nese na keni follow ne rrjetet sociale do keni zbritje 5%. <br> <br>Cka po pret?!
+</div>
+<br>
+                                                  <!--          FOOTER         -->
+<div class="footer">
+  <div class="divv" style="flex-grow: 1; flex: 30%;">
+  <h1 style="margin-bottom: 2px;">Rreth nesh</h1><hr style="border-top: 2px solid red;"><br>
+  <p>Infinity Digital Agency eshte kompani e cila merrret me zhvillimin e Website-eve dhe Softuereve
+    te ndryshem. Ne kemi qene gjithmone ne sherbim te klienteve tane dhe ata asnjehere nuk jane 
+    zhgenjyer me punen qe e kemi bere.</p>
+    <div class="social">
+      <a href="https://www.facebook.com/Infinity-Digital-Agency-105978701219535" target="_blank"><span class="fab fa-facebook-f"></span></a>
+      <a href="https://www.instagram.com/infinity_digitalagency/" target="_blank"><span class="fab fa-instagram"></span></a>
+      <a href="#" target="_blank"><span class="fab fa-twitter"></span></a>
+    </div>
+</div>
+    
+  <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;">Adresa</h1><hr style="border-top: 2px solid red;">
+    <div class="div2" style="margin-top: 5px;">
+      <div class="place">
+        <span class="fas fa-map-marker-alt"></span>
+        <span class="text">Prishtinë, Kosovë</span>
+      </div>
+<div class="phone">
+        <span class="fas fa-phone-alt"></span>
+        <span class="text">+383 44685122</span>
+      </div>
+ <div class="phone">
+        <span class="fas fa-phone-alt"></span>
+        <span class="text">+383 49796484</span>
+      </div>
+<div class="email">
+        <span class="fas fa-envelope"></span>
+        <span class="text">infinitydigitalagency01@gmail.com</span>
+      </div>  
+    </div>
+  </div>
+
+      <!-- Djathtas -->
+
+  <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;">Na kontaktoni</h1><hr style="border-top: 2px solid red;">
+    <div class="form1">
+      <form action="/action_page.php">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
+    
+        <input type="submit" value="Submit">
+      </form>
+    </div>       
 </div>
 
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-<h2></h2>
+</div>
+
+<div class="bottom" style="background-color: #222;padding-bottom: 10px;">
+  <center>
+            <span style="color: white;" class="credit">Created By <a style="color: rgb(214, 42, 42);" href="https://www.facebook.com/Infinity-Digital-Agency-105978701219535">Infinity Digital Agency</a> | </span>
+            <span style="color: white;" class="far fa-copyright"></span><span style="color: white;"> 2020 All rights reserved.</span>
+          </center>
+  </div>
+
 
 </body>
 </html>

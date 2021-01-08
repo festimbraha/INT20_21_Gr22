@@ -12,11 +12,6 @@
     src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous"></script>
-    <script> 
-      $(function(){
-        $("#footer").load("footer.html"); 
-      });
-      </script> 
     <style>
      
     .badi{
@@ -69,6 +64,79 @@
 #lista::before {content: "•"; color: red;
   display: inline-block; width: 1em;
   margin-left: -1em}
+
+
+  .mySlides {display: none;}
+.mySlides img {vertical-align: middle;
+    height: 300px;
+}
+
+.slideshow-container {
+  max-width: 600px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+  
+.btn1, .btn2 {
+  background-color: rgb(13, 119, 138);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.btn1, .btn2 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
     </style>
     <script>
     $(function() {
@@ -91,9 +159,9 @@
             <li class="item"><a href="services.html">Services</a></li>
             <li class="item"><a href="contacts.html">Contact Us</a></li>
             <li class="item"><a href="projects.html">Projects</a></li>
+            <li class="item"><a href="others.html">Price List</a></li>
             </li>
             <li class="item button"><a href="login.html">LOG IN</a></li>
-            <li class="item button secondary"><a href="others.html">Others</a></li>
             <li class="toggle"><span class="bars"></span></li>
         </ul>
     </nav>
@@ -225,7 +293,80 @@
 <br>
 <div class="clear10">
 		<canvas id="footerCanvas" height="100" width="200" style="width: 100%; height: 10px;">
-	</div>
+  </div>
+  <br>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="img_proj/insajd.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img_proj/agri.png" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img_proj/trepca.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img_proj/cine.png" style="width:100%">
+    </div>
+    
+    </div>
+    <br>
+    
+    <div class="dotss" style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+
+    <div class="btnbtn" style="position: relative; height: 50px;">
+      <div class="center">
+      <button class="btn1">Fsheh reklamat</button>
+      <button class="btn2">Shfaq reklamat</button>
+    </div>
+  </div>
+
+<br>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2500); 
+      }
+      </script>
+      <script>
+              $(document).ready(function(){
+  $(".btn1").click(function(){
+    $(".slideshow-container").hide();
+    $(".dotss").hide();
+  });
+  
+  $(".btn2").click(function(){
+    $(".slideshow-container").show();
+    $(".dotss").show();
+  });
+});
+      </script>
+
 
 <div class="footer">
   <div class="divv" style="flex-grow: 1; flex: 30%;">

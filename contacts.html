@@ -146,20 +146,20 @@ tr:nth-child(even) {
 </head>
 <body>
   
-    <nav>
-        <ul class="menu"><!--Menu-->
-            <li class="logo"><img src="logo.png" id="foto"><a href="index.html"></a></li>
-            <li class="item"><a href="index.html">Home</a></li>
-            <li class="item"><a href="about_us.html">About us</a></li>
-            <li class="item"><a href="services.html">Services</a></li>
-            <li class="item"><a href="contacts.html">Contact Us</a></li>
-            <li class="item"><a href="projects.html">Projects</a></li>
-            </li>
-            <li class="item button"><a href="login.html">LOG IN</a></li>
-            <li class="item button secondary"><a href="signup.html">SIGN UP</a></li>
-            <li class="toggle"><span class="bars"></span></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul class="menu">
+        <li class="logo"><a href="index.html" id="home"><img src="logo.png" id="foto"></a></li>
+        <li class="item"><a href="index.html">Home</a></li>
+        <li class="item"><a href="about_us.html">About us</a></li>
+        <li class="item"><a href="services.html">Services</a></li>
+        <li class="item"><a href="contacts.html">Contact Us</a></li>
+        <li class="item"><a href="projects.html">Projects</a></li>
+        <li class="item"><a href="others.html">Price List</a></li>
+        </li>
+        <li class="item button"><a href="login.html">LOG IN</a></li>
+        <li class="toggle"><span class="bars"></span></li>
+    </ul>
+</nav>
 
 <br>
 
@@ -177,10 +177,13 @@ tr:nth-child(even) {
 
                   <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
                   <div style="margin-top: -35px;">
-                  <select class="option" name="subject">
-                    <option disabled="disabled" selected="selected">Per cfare sherbimi keni nevoje</option>
+                      <input list="browsers" name="subject" id="browser" placeholder="Per cfare sherbimi keni nevoje? ">
+                      <datalist id="browsers">
                     <option>Website</option>
                     <option>Aplikacion mobil</option>
+                    <option>Mirembajtje</option>
+                    <option>Host</option>
+                    <option>Domain</option>
                     <option>Social Media Marketing</option>
                 </select>
             </div>
@@ -314,28 +317,9 @@ tr:nth-child(even) {
               <input type="text" id="fname" name="firstname" placeholder="Your name..">
           
               <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
-              <form action="/action_page.php" method="get">
-                <label for="browser">Choose your browser from the list:</label>
-                <input list="browsers" name="browser" id="browser"> =<output name="browser" for="browsers"></output>
-                <datalist id="browsers">
-                  <option value="Edge">
-                  <option value="Firefox">
-                  <option value="Chrome">
-                  <option value="Opera">
-                  <option value="Safari">
-                </datalist>
+              
 
-                <br><br>
-                <form action="#">
-                  <p id="paragrafi">Nga keni degjuar per ne</p>
-                  <br>
-                  <input type="checkbox" name="check" id="check">
-                  <label for="infinity">Ne rrjetet sociale</label>
-                  <input type="checkbox" name="check" id="check">
-                  <label for="infinity">Nga mediat</label>
-                  <input type="checkbox" name="check" id="check">
-                  <label for="infinity">Diku tjeter</label>
-                </form>
+               
                 <input type="submit">
               </form>
             </form>
@@ -366,7 +350,7 @@ tr:nth-child(even) {
 var QTX = 42.6487;
 var QTY = 21.1649;
 var distanca = Math.sqrt(Math.pow((QTX - position.coords.latitude), 2) + Math.pow((QTY - position.coords.longitude), 2));
-alert("Ju jeni larg nga zyret tona " + distanca.toFixed(3)*100 + " km" + mesazhi());
+alert("Ju jeni larg nga zyret tona " + distanca.toFixed(2)*100 + " km" + mesazhi());
 
 function mesazhi(){
 if (distanca*100 < 50) {

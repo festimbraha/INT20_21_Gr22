@@ -12,6 +12,18 @@
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous">
     </script>
+      <script src="js/script.js"></script>
+      <script>
+        function validateEmail(i) {
+          console.log("asd");
+          if(!checkEmail(i.value)){
+            $(i).css("background-color", "red");
+          }
+          else {
+            $(i).css("background-color", "white");
+          }
+        }
+      </script>
     <style>
          #foto{
           border-radius: 50%;
@@ -172,7 +184,7 @@ tr:nth-child(even) {
                    
                   <div style="margin-top: -20px;">
                   
-                      <input id="fname" type="email" name="email" placeholder="Your email..">
+                      <input id="fname" type="email" name="email" placeholder="Your email.." onkeyup="validateEmail(this)">
                   </div>    
 
                   <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>

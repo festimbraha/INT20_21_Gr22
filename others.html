@@ -16,6 +16,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="calc.js"></script>
 <style>
+  .row{
+    display: flex;
+  align-items: stretch;
+  }
 .kol{
   display: flex;
   align-items: stretch;
@@ -81,17 +85,28 @@
   text-align: center;
   background-color:rgb(13, 119, 138);
   border: solid 1px #c3c3c3;
-  width: 70%;
+  width: 65%;
   margin: auto;
   border-radius: 10px;
   color: white;
   cursor: pointer;
 }
+#baba{
+  width: 70%;
+  transition: width 2s;
+  margin: auto;
+}
+#baba:hover{
+  width: 90%;
+}
 
 #panel {
   padding: 50px;
   display: none;
+  column-count: 2;
+  column-rule-width: 1px;
 }
+
 .contein{
             width: 350px;
             height: 350px;
@@ -123,6 +138,11 @@
 audio:focus {
     outline: none;
 }
+#extraServices  li {
+			border-bottom: 1px solid;
+			padding: 3px;
+			cursor: grab;
+		}
 </style>
 </head>
 <body>
@@ -153,25 +173,39 @@ audio:focus {
     });
   });
   </script>
-
 <div class="kol" style="position: relative;">
   <div style="flex-grow: 5;" class="columns">
     <ul class="price">
       <li class="header">Basic / Frontend</li>
-      <div ondrop="drop(event)" ondragover="allowDrop(event)"><li>€ 300</li></div> 
+      <!--   <div style="height: auto; padding:10px; background: #0089ab;; color: white;">
+            <h3 class="text-white" style="margin-left: 10px; display: inline-block;margin-left: 130px;"><span>Mirembajtja</span>
+              <button style="cursor: pointer;" class="btn btn-orange" onclick="addToCart(this);">Shtoje në shportë</button>
+            </h3>
+            <p>50€/muaj</p>
+          </div>  -->
+      <li> <div style="height: auto; padding:10px; background: white;; color: black;">
+            <p class="text-white" style="margin-left: 10px; display: inline-block;margin:auto; font: 12px;"><span>Website</span>
+              <button style="cursor: pointer; color: white;background-color: #111;" class="button" onclick="addToCart(this);">Shtoje në shportë</button>
+            </p>
+            <p>300€</p>
+          </div></li>
       <li>Host</li>
       <li>Domain</li>
       <li>Nje muaj mirembajtje</li>
       <li>Backup</li>
-      <li class="grey"><a onclick="myFunction()" class="button12">Llogarit</a></li>
+      <li class="grey"><a onclick="myFunction()" class="button12" style="background-color: #111;">Llogarit</a></li>
     </ul>
   </div>
   
   <div style="flex-grow: 5;" class="columns">
     <ul class="price">
       <li class="header" style="background-color:rgb(13, 119, 138)">Pro / Dynamic</li>
-      <div ondrop="drop(event)" ondragover="allowDrop(event)"><li>€ 600</li></div> 
-      <li>Host</li>
+      <li> <div style="height: auto; padding:10px; background: white;; color: black;">
+        <p class="text-white" style="margin-left: 10px; display: inline-block;margin:auto; font: 12px;"><span>Website</span>
+          <button style="cursor: pointer; color: white;background-color: #0089ab;" class="button" onclick="addToCart(this);">Shtoje në shportë</button>
+        </p>
+        <p>600€</p>
+      </div></li>      <li>Host</li>
       <li>Domain</li>
       <li>Dy muaj mirembajtje</li>
       <li>Backup</li>
@@ -182,29 +216,21 @@ audio:focus {
 <br>
 
 <div class="contein" id="MyDiv" style="display: none;">
-  <h1>Kalkulatori</h1>
-  <p style="color: red; font-size: 12px; margin-left: -25px;"><b>*Mundesh me i vendos vlerat me zvarritje(Drag&Drop)</b></p><br>
-  <p>Cmimi: <br> <input id="cmimi" type="number" onchange="llogarite()" oninput="myFunction1()"> €</p><br>
+  <h1>Kalkulatori</h1><br>
+  <p>Cmimi: <br> <input id="cmimi" type="number" onchange="llogarite()" oninput="myFunction1()" ondrop="drop(event)" ondragover="allowDrop(event)"> €</p><br>
           <p style="color:red; font-size: 12px; margin-top: -15px;" id="p01"></p>
   <p>Mirembajtja: <br> <input id="miremb" type="number" onchange="llogarite()"> €</p><br>
   <p>Zbritja: <br> <input id="zbritja" value="5" type="number" onchange="llogarite()"> %</p>
   <h2 id="pagesa"></h2>
 </div>
 <script src="calc.js"></script>
-<br>
-
-<h1 style="text-align:center">Vlera me mirembajtje</h1>
-
-<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
-<input type="range" id="a" value="50" size="20" style="margin-left:20p;">
-+<input type="number" id="b" value="25">
-=<output name="x" for="a b"></output>
-</form>
 
 <br>
 
 
 <script>
+  var cmimi10 = 0;
+
   function allowDrop(ev) {
     ev.preventDefault();
   }
@@ -214,18 +240,85 @@ audio:focus {
   }
   
   function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-  }
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  cmimi10 += 5;
+  $("#cmimi10").text(cmimi10);
+}
+function addToCart(i){
+	$("#shportaElements").append("<p>" +  $(i).prev().text() + "</p>");
+	console.log($(i).parent().next().text());
+	cmimi10 = cmimi10 + parseFloat($(i).parent().next().text());
+	if(!Number.isNaN(cmimi10))
+		$("#cmimi10").text(cmimi10.toString());
+}
   </script>
-
+<div id="baba">
 <div id="flip">Me shume informata</div>
 <div id="panel">Cmimet e mesiperme jane te diskutushme, varesisht nga permbajtja e website-s qe ju doni. Mirembajtja per pakon "BASIC" kushton
                 50€, ndersa per pakon "PRO" kushton 150€. <br>Klientet tane gjithmone jane ndare shume te kenaqur me ne. Behu edhe ti nje nga ata.
                 Nese na keni follow ne rrjetet sociale do keni zbritje 5%. <br> <br>Cka po pret?!
 </div>
+</div>
 <br>
+
+
+<div class="papa" style="background: #f1f1f1; border: 1px solid lightgrey; margin-bottom: 50px; border-radius: 10px; padding: 10px; box-shadow: 1px 1px 5px #cecece;">
+  <div class="row">
+    <div class="col75" style="border-right: 1px solid grey; height: auto; flex-grow: 6;">
+      <svg width="100" height="100" style="margin-bottom: -65px; z-index: -1;">
+        <circle cx="50" cy="50" r="40" stroke="#0038b5" stroke-width="4" fill="#0038b5" />
+      </svg>
+      <h1>MERR SH&Euml;RBIM TË RI</h1><br>
+      <ol>
+        <li>
+          <div style="height: auto; padding:10px; background: #0089ab;; color: white;">
+            <h3 class="text-white" style="margin-left: 10px; display: inline-block;margin-left: 130px;"><span>Mirembajtja per pakon Basic </span>
+              <button style="cursor: pointer; background-color:#0089ab; border: 1px solid; outline: 0px;" class="button" onclick="addToCart(this);">Shtoje në shportë</button>
+            </h3>
+            <p>50€/muaj</p>
+          </div>
+        </li>
+        <li>
+          <div style="height: auto; padding:10px; background: #2e2e2e; color: white">
+            <h3 class="text-white" style="margin-left: 10px; display: inline-block;margin-left: 130px;"><span>Mirembajtja per pakon Pro</span>
+              <button style="cursor: pointer; background-color: #2e2e2e; border: 1px solid; outline: 0px;" class="button" onclick="addToCart(this);">Shtoje në shportë</button>
+            </h3>
+            <p>150€/muaj</p>
+        </div>
+        </li>
+      </ol>
+      <h4>Shërbime ekstra (Tërheqi në shportë) +5€/shërbim</h4>
+      <ul id="extraServices" style="border: 1px groove;">
+        <li>
+          <div ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div draggable="true" ondragstart="drag(event)" id="extraElement1">HTTP<b>S</b></div>
+          </div>
+        </li>
+        <li>
+          <div ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div draggable="true" ondragstart="drag(event)" id="extraElement2">SSL</div>
+          </div>
+        </li>
+        <li>
+          <div ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div draggable="true" ondragstart="drag(event)" id="extraElement3">Cdo ndryshim stili</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col25" style="flex-grow: 4;">
+      <div id="shporta" style="overflow-y: scroll;">
+        <h3>Shporta</h3>
+        <div id="shportaElements" style="border: 1px groove; min-height: 350px; height: auto;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      </div>
+      <label>&Ccedil;mimi: </label><output name="cmimi10" id="cmimi10"></output>
+    </div>
+  </div>
+</div>
+
+
                                                   <!--          FOOTER         -->
 <div class="footer">
   <div class="divv" style="flex-grow: 1; flex: 30%;">
@@ -285,6 +378,20 @@ audio:focus {
           </center>
   </div>
 
+  <script type="text/javascript">
+    $(document).ready(function() { 
+      //Hover
+      $('.dropdown').parent().hover(
+        function() {
+          $('.dropdown').css('display','block');
+        }, function() {
+          $('.dropdown').css('display','none');
+        }
+      );
+      $("#shporta").css("height", $($(".container").children()[0]).height() - 150 + "px");
+    });
+    
+    </script>
 
 </body>
 </html>

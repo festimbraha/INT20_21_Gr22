@@ -195,7 +195,7 @@
   <section class="services">
       <!--heading-->
       <div class="services-heading">
-          <h2 style="color:rgb(18, 161, 161)">Shërbimet qe ne i ofrojme</h2>
+          <h2 style="color:rgb(18, 161, 161)" id="headi123">Shërbimet qe ne i ofrojme</h2>
           <p>Ky Website eshte Official i Kompanise tone, andaj per cfaredo pikepyetje, kerkesa dhe sherbime ju lutem na kontaktoni</p>
       </div>
       <!--box-container-------------->
@@ -244,8 +244,10 @@
               <p>Ofrojme mirembajtje ne cdo moment dhe kohe. Stafi yne i kualifikuar ju mundesone qe te keni
                 qasja dhe bashkepunim ne cdo kohe. <mark> Mirembajtja 24/7.</mark>
                 Munde te kontaktoni:
+                <ul>
                 <li id="lista"><span>Ne numrin e Telefonit</span></li>
                 <li id="lista"><span>Ne zyren tone</span></li>
+              </ul>
               </p>
               <!--btn------>
               <a href="#home">Log In</a>
@@ -296,6 +298,9 @@
   </div>
   <br>
 
+  <p style="text-align:center">Disa nnga Partneret</p>
+  <br>
+
   <div class="slideshow-container">
 
     <div class="mySlides fade">
@@ -303,7 +308,7 @@
     </div>
     
     <div class="mySlides fade">
-      <img src="img_proj/agri.png" style="width:100%">
+      <img src="img_proj/tesla.jpg" style="width:100%">
     </div>
     
     <div class="mySlides fade">
@@ -344,7 +349,8 @@
           slides[i].style.display = "none";  
         }
         slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
+        if (slideIndex > slides.length) {
+          slideIndex = 1}    
         for (i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active", "");
         }
@@ -370,7 +376,7 @@
 
 <div class="footer">
   <div class="divv" style="flex-grow: 1; flex: 30%;">
-  <h1 style="margin-bottom: 2px;">Rreth nesh</h1><hr style="border-top: 2px solid red;"><br>
+  <h1 style="margin-bottom: 2px; border-style:inset">Rreth nesh</h1><hr style="border-top: 2px solid red;"><br>
   <p>Infinity Digital Agency eshte kompani e cila merrret me zhvillimin e Website-eve dhe Softuereve
     te ndryshem. Ne kemi qene gjithmone ne sherbim te klienteve tane dhe ata asnjehere nuk jane 
     zhgenjyer me punen qe e kemi bere.</p>
@@ -386,6 +392,10 @@
       <div class="place">
         <span class="fas fa-map-marker-alt"></span>
         <span class="text">Prishtinë, Kosovë</span>
+        <dl>
+          <dt>Bregu i Diellit</dt>
+          <dd>Afer fakultetit Teknike - UP</dd>
+        </dl>
       </div>
 <div class="phone">
         <span class="fas fa-phone-alt"></span>
@@ -404,7 +414,7 @@
 
       <!-- Djathtas -->
 
-  <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;">Na kontaktoni</h1><hr style="border-top: 2px solid red;">
+  <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px; border-style:solid" >Na kontaktoni</h1><hr style="border-top: 2px solid red;">
     <div class="form1">
       <form action="/action_page.php">
         <input type="text" id="fname" name="firstname" placeholder="Your name..">

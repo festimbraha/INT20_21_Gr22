@@ -1,8 +1,12 @@
 CACHE MANIFEST
-
-CACHE:
 index.html
 style.css
 another.css
-https://code.jquery.com/jquery-3.4.1.slim.min.js
-
+https://fonts.googleapis.com/css?family=Roboto&display=swap
+https://code.jquery.com/jquery-3.4.1.min.js
+.Images/login.svg
+.Images/account view.svg
+.Images/lock.svg
+.Images/document.svg
+logo.png
+INFINITY.mp4

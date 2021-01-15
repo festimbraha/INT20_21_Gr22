@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            line-height: 200px;
+            margin: 3rem;
+            
+        }
+        .box:hover{
+            outline: 1rem solid rgb(0, 0, 0);
+            opacity: 0.7;
+        }
+        .one{
+            background-color: rgb(19, 110, 138);
+            transform: skewY(-40deg) scaleY(1.55) scaleX(2);
+            transform-origin: left -100px;
+            transform: scaleY(1.0);
+        }
+        .one:hover{
+            transform: skewY(-40deg) scaleY(1.55) scaleX(1);
+        }
+        .two{
+            background-color: rebeccapurple;
+            transform: skewy(40deg);
+            rotate(30deg | 5.6turns | 3.14rad )
+            translate(100px, -400px)  translateX() translateY()
+            scale(2)  scaleX()  scaleY()
+            skewX() skewY();
+            
+        }
+        .three{
+            background-color: orangered;
+            transform: skewY(-40deg) scaleY(1.0);
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <div class="box one">
+        You
+    </div>
+    <div class="box two">
+        Are
+    </div>
+    <div class="box three">
+        Welcome
+    </div>
+    <script src="./js/main.js" type="module"></script>
+
+
+
+</body>
+</html>

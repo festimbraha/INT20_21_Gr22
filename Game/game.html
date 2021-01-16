@@ -6,9 +6,32 @@
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="./css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <style>
+
+
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            border: 1px solid #cdcdcd;
+            display: inline-block;
+        }  
+
+        .button {
+            background-color: #33B0FF;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 2px 3px;
+            cursor: pointer;
+            }
 
 
         
@@ -85,25 +108,32 @@
         }
         .one{
             background-color: rgb(19, 110, 138);
-            transform: skewY(-40deg) scaleY(1.55) scaleX(2);
+            transform: skewY(-30deg) scaleY(1.55) scaleX(2);
             transform-origin: left -100px;
-            transform: scaleY(1.2);
+            transform: scaleY(1.1);
         }
         .one:hover{
             transform: skewY(-40deg) scaleY(1.55) scaleX(1);
         }
         .two{
-            background-color: rebeccapurple;
-            transform: skewy(40deg);
-            rotate(30deg | 5.6turns | 3.14rad )
-            translate(100px, -400px)  translateX() translateY()
-            scale(2)  scaleX()  scaleY()
-            skewX() skewY();
+            background-color: rgb(228, 83, 17);
+            transform: skewY(-30deg) scaleY(1.55) scaleX(2);
+            transform-origin: left -100px;
+            transform: scaleY(1.1);
             
         }
+        .two:hover{
+            transform: skewY(10deg) scaleY(1.55) scaleX(1);
+        }
         .three{
-            background-color: orangered;
-            transform: skewY(-40deg) scaleY(1.0);
+            background-color: rgb(9, 11, 12);
+            transform: skewY(-30deg) scaleY(1.55) scaleX(2);
+            transform-origin: left -100px;
+            transform: scaleY(1.1);
+            margin-left: 35%;
+        }
+        .three:hover{
+            transform: skewY(180deg) scaleY(1) scaleX(1);
         }
 
         #slideMe { 
@@ -112,12 +142,44 @@
             padding:25px 15px; 
     }
 
+    #sample-div1 {
+        display: none;
+      }
+
         
     </style>
+
+
+    <script>
+        $(document).ready(function(){
+        $("#hide").click(function(){
+        $("h2").hide("fast", function(){
+        // alert define inside the callback
+        alert("The content is now hidden");
+        });
+        });
+        });
+
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+              $("#hide").animate({height: "300px"});
+            });
+            $("#btn2").click(function(){
+              $("#hide").animate({height: "100px"});
+            });
+          });
+
+          $(document).ready(function(){
+            $(".box").click(function(){
+                $(this).css("background-color", "green");
+            });   
+             
+        });
+        </script>
 </head>
 <body>
 
-di
+
     <h2>Emrat e Lojtareve</h2>
 
 <p id="demo"></p>
@@ -135,11 +197,42 @@ var emri2 = prompt("Lojtari 2: ");
 
 var player = new Person(emri1, emri2);
 
-// Display age
 document.getElementById("demo").innerHTML =
 "Lojtari 1 " + player.firstName + "." + " Lojtari 2: " + player.firstName2; 
 
 </script>
+
+<div>
+    <p>Fillo sekondat: <output id="result"></output></p>
+    <button onclick="startWorker()">Numero sekondat per lojen e secilit lojtar</button> 
+    <button onclick="stopWorker()">Ndalo sekondat</button>
+    <br /><br />
+    
+    
+    <script>
+    var w;
+    
+    function startWorker()
+    {
+    if(typeof(Worker)!=="undefined")           
+      {
+      w=new Worker("demo_workers.js");          
+    
+     
+      w.onmessage = function (event) { document.getElementById("result").innerHTML=event.data; };
+      }
+    else
+      {
+      document.getElementById("result").innerHTML="Sorry, your browser does not support Web Workers...";
+      }
+    }
+    
+    function stopWorker()
+    { 
+    w.terminate();        
+    }
+    </script>
+</div>
 
 <div class="row">
     <div id="app" class="column"></div>
@@ -170,19 +263,19 @@ document.getElementById("demo").innerHTML =
         $('#btnSlideUp').click(function() {
             $('#slideMe').slideUp('slow');
     });
-    $('#btnSlideDown').click(function() {
-            $('#slideMe').slideDown();
-    });
-    $('#btnSlideToggle').click(function() {
-            ss$('#slideMe').slideToggle('fast');
-    });
+
+    $("#sample-div1").fadeIn(2000, function(){
+        console.log("Done!");
+      });
     </script>
 
-    <div id="slideMe"> Slide </div>
+    <div id="slideMe"> Kliko per te pare fituesin </div>
 <!-- One button for each slide command -->
 <input type="button" id="btnSlideUp" value="Slide Up">
-<input type="button" id="btnSlideDown" value="Slide Down">
-<input type="button" id="btnSlideToggle" value="Slide Toggle">
+
+
+
+
 
 <div class="table-wrapper">
     <table class="fl-table">
@@ -204,13 +297,20 @@ document.getElementById("demo").innerHTML =
     </table>
   </div>
 
+<button class ="button" id="hide">Hide</button>
+<h2>Nese don qe te fshehesh rezultatin: Rezultati eshte 2-0 per player 1</h2>
 
-  <h1>Luajme se bashku</h1>
 
-<figure>
-  <img src="images/game.jpg" alt="" style="width:100%">
-  <figcaption>Nje nga lojet klasike, se shpejti edhe te ne</figcaption>
-</figure>
+<h1 style="text-align:center; color:#33B0FF">Per femijet e vegjel</h1>
+
+<div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    <p><strong>Note:</strong> Kliko per te mbushur katroret e meposhtem dhe numero sa katror jane ne foto</p>
+    
+
+    
 
 </body>
 </html>

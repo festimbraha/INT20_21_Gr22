@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/467ae1d3df.js" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
     <title>Infinity-Digital-Agency-</title>
     <link rel="stylesheet" href="services.css">
 <style>
@@ -161,10 +165,14 @@ a:hover {
   }
 }
 
+#sample-div1 {
+  display: none;
+}
+
 
 
 section {
-	background: #a0a0a0;
+	background: #f5f3f3;
 	color: #666666;
 	display: inline-block;
 }
@@ -453,6 +461,24 @@ input[type=submit]:hover {
 </section>
 
 
+
+<script>
+  $("#sample-div1").fadeIn(1000, function(){
+    console.log("Done!");
+  });
+
+</script>
+<div id="sample-div1">
+  <p>Mire se na vini klient te dashur</p>
+</div>
+
+
+
+
+<figure>
+  <img src="logo.png" alt="" style="width:200px; height:200px; margin-left: 40%;">
+  <figcaption style="text-align:center; color:#005959">Mos ngurro, na kontakto</figcaption>
+</figure>
 
 
 <div class="footer" style="font-family:Arial, Helvetica, sans-serif;">

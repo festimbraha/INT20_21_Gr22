@@ -317,12 +317,12 @@ function addToCart(i){
     </div>
   </div>
 </div>
-
+<div id="fund" style="width: 80%; margin: auto;">
 <figure>
 
 
-  <figcaption>SVG-ja</figcaption>
-<svg height="130" width="500">
+  <figcaption></figcaption>
+<svg height="130" width="500" style="margin-left: 100px;">
   <defs>
     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%"
@@ -339,11 +339,12 @@ Sorry, your browser does not support inline SVG.
 
 </figure>
 
+<div id="fund2" style="margin: auto;">
 
 <!--Pjesa e Local dhe Session Storage-->
-<h2>Deshironi te vendosni Fotgrafine e dokumentit te pagesese</h2>
-<input type="file" id="myFileInput">
-<img id="imgPreview" src="" alt="Preview">
+<p id="demo" style="text-align: center;"><b>Deshironi te vendosni fotografine e dokumentit te pageses</b></p>
+<input type="file" id="myFileInput" style="display: block; margin-left: auto;">
+<img id="imgPreview" src="" alt="Preview" style="max-width: 300px; max-height: 500px;display: block; margin-left: auto; margin-right: auto;">
 
 <script>
   document.querySelector("#myFileInput").addEventListener("change",function(){
@@ -370,15 +371,15 @@ Sorry, your browser does not support inline SVG.
 </script>
 <div>
 <form action="/action_page.php">
-  <label for="country_code">Country code:</label>
-  <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code" size="20"><br><br>
-  <input type="submit">
+  <label for="country_code" style="display: block ;text-align: center;">Country code:</label>
+  <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code" style="width: 15%;display: block; margin-left: auto; margin-right: auto;" size="20"><br><br>
+  <input type="button" style="width: 15%; display: block; margin-left: auto; margin-right: auto;" onclick="myFunction112()" value="Dergo">
 </form>
 </div>
 
 <br>
 <br>
-
+</div>
 
 <div>
 <p>Nderro muziken sipas qejfit tuaj.</p>
@@ -387,6 +388,16 @@ Sorry, your browser does not support inline SVG.
 </audio>
 
 </div>
+</div>
+
+
+<script>
+  function myFunction112() {
+    var str = document.getElementById("demo").innerHTML; 
+    var res = str.replace(/deshironi te vEndosni fotografine e dokumentit te pageses/i, "Ju faleminderit per besimin tuaj!");
+    document.getElementById("demo").innerHTML = res;
+  }
+  </script>
 
                                                   <!--          FOOTER         -->
 <div class="footer">
@@ -427,18 +438,36 @@ Sorry, your browser does not support inline SVG.
 
   <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;">Na kontaktoni</h1><hr style="border-top: 2px solid red;">
     <div class="form1">
-      <form action="/action_page.php">
+      <form name="myForm" onsubmit="return validateForm()" method="post" required>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
     
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
     
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" style="width: 25%;">
       </form>
     </div>       
 </div>
 
 
 </div>
+
+<script>
+  function validateForm(){  
+var name=document.myForm.firstname.value;  
+  
+if (name==null || name==""){  
+  alert("Shkruaj emrin!");  
+  return false;  
+}else if(name.length<6){  
+  alert("Username duhet te jete me i gjate se 4 karaktere");  
+  return false;  
+  }  
+  else{
+    alert("Mesazhi u dergua me sukses!");
+    return true;
+  };
+}  
+  </script>
 
 <div class="bottom" style="background-color: #222;padding-bottom: 10px;">
   <center>

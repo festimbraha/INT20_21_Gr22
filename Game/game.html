@@ -6,8 +6,69 @@
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="./css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <style>
+
+
+        
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #b2b6b5;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #1893c4;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+        *{
+            box-sizing: border-box;
+        }
+        /* Set additional styling options for the columns*/
+        .column {
+        float: left;
+        width: 50%;
+        }
+    
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+
         .box{
             width: 200px;
             height: 200px;
@@ -26,7 +87,7 @@
             background-color: rgb(19, 110, 138);
             transform: skewY(-40deg) scaleY(1.55) scaleX(2);
             transform-origin: left -100px;
-            transform: scaleY(1.0);
+            transform: scaleY(1.2);
         }
         .one:hover{
             transform: skewY(-40deg) scaleY(1.55) scaleX(1);
@@ -44,11 +105,45 @@
             background-color: orangered;
             transform: skewY(-40deg) scaleY(1.0);
         }
+
+        #slideMe { 
+            background-color: #037cd5; 
+            color:#FFF;
+            padding:25px 15px; 
+    }
+
+        
     </style>
 </head>
 <body>
-    <div id="app"></div>
-    
+
+di
+    <h2>Emrat e Lojtareve</h2>
+
+<p id="demo"></p>
+
+<script>
+// Constructor function for Person objects
+function Person(first, last) {
+  this.firstName = first;
+  this.firstName2 = last;
+}
+
+// Create a Person object
+var emri1 = prompt("Lojtari 1: ");
+var emri2 = prompt("Lojtari 2: ");
+
+var player = new Person(emri1, emri2);
+
+// Display age
+document.getElementById("demo").innerHTML =
+"Lojtari 1 " + player.firstName + "." + " Lojtari 2: " + player.firstName2; 
+
+</script>
+
+<div class="row">
+    <div id="app" class="column"></div>
+    <div class="column">
     <div class="box one">
         You
     </div>
@@ -58,9 +153,64 @@
     <div class="box three">
         Welcome
     </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+</div>
+
+
+
     <script src="./js/main.js" type="module"></script>
 
 
+    <script>
+        $('#btnSlideUp').click(function() {
+            $('#slideMe').slideUp('slow');
+    });
+    $('#btnSlideDown').click(function() {
+            $('#slideMe').slideDown();
+    });
+    $('#btnSlideToggle').click(function() {
+            ss$('#slideMe').slideToggle('fast');
+    });
+    </script>
+
+    <div id="slideMe"> Slide </div>
+<!-- One button for each slide command -->
+<input type="button" id="btnSlideUp" value="Slide Up">
+<input type="button" id="btnSlideDown" value="Slide Down">
+<input type="button" id="btnSlideToggle" value="Slide Toggle">
+
+<div class="table-wrapper">
+    <table class="fl-table">
+      <thead>
+        <tr>
+          <th>Player 1</th>
+          <th>Player 2</th>
+          <th>Winner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>First step</td>
+          <td>Second Step</td>
+          <td>Who win three games</td>
+        </tr>
+    
+      </tbody>
+    </table>
+  </div>
+
+
+  <h1>Luajme se bashku</h1>
+
+<figure>
+  <img src="images/game.jpg" alt="" style="width:100%">
+  <figcaption>Nje nga lojet klasike, se shpejti edhe te ne</figcaption>
+</figure>
 
 </body>
 </html>

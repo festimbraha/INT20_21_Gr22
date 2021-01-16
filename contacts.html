@@ -409,6 +409,7 @@ tr:nth-child(even) {
   function tregoPozicionin(position) {
 var QTX = 42.6487;
 var QTY = 21.1649;
+QTX.toExponential();
 var distanca = Math.sqrt(Math.pow((QTX - position.coords.latitude), 2) + Math.pow((QTY - position.coords.longitude), 2));
 alert("Ju jeni larg nga zyret tona " + distanca.toFixed(2)*100 + " km" + mesazhi());
 

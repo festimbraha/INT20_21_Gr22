@@ -494,7 +494,7 @@ input[type=submit]:hover {
     <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;" id="headi">Na kontaktoni</h1><hr style="border-top: 2px solid red;">
         <br>
       <div class="form1">
-        <form action="/action_page.php">
+        <form name="myForm" onsubmit="return validateForm()" method="post" required>
           <input type="text" id="fname" name="firstname" placeholder="Your name..">
       
           <textarea id="subject" name="subject" placeholder="Write something.." style="height:70px"></textarea>
@@ -509,6 +509,23 @@ input[type=submit]:hover {
   </div>
   
   </div>
+  <script>
+    function validateForm(){  
+  var name=document.myForm.firstname.value;  
+    
+  if (name==null || name==""){  
+    alert("Shkruaj emrin!");  
+    return false;  
+  }else if(name.length<6){  
+    alert("Username duhet te jete me i gjate se 4 karaktere");  
+    return false;  
+    }  
+    else{
+      alert("Mesazhi u dergua me sukses!");
+      return true;
+    };
+  }  
+    </script>
   <div class="bottom" style="background-color: #222;padding-bottom: 10px;font-family: Arial, Helvetica, sans-serif;">
     <br>
     <center>

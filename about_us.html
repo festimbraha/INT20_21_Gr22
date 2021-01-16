@@ -303,7 +303,7 @@
 
   <div class="divv" style="flex-grow: 1; flex: 30%;"><h1 style="margin-bottom: 2px;">Na kontaktoni</h1><hr style="border-top: 2px solid red;">
     <div class="form1">
-      <form action="/action_page.php" autocomplete="off">
+      <form name="myForm" onsubmit="return validateForm()" method="post" required>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
     
         
@@ -319,6 +319,24 @@
 
 
 </div>
+
+<script>
+  function validateForm(){  
+var name=document.myForm.firstname.value;  
+  
+if (name==null || name==""){  
+  alert("Shkruaj emrin!");  
+  return false;  
+}else if(name.length<6){  
+  alert("Username duhet te jete me i gjate se 4 karaktere");  
+  return false;  
+  }  
+  else{
+    alert("Mesazhi u dergua me sukses!");
+    return true;
+  };
+}  
+  </script>
 
 <div class="bottom" style="background-color: #222;padding-bottom: 10px;">
   <center>

@@ -189,7 +189,8 @@ section h1 {
   align-items: center;
   justify-content: space-around;
   height: 100vh;
-  background: #031628; 
+  color: white;
+  background: #abb1b6; 
 }
 
 .btn {
@@ -202,7 +203,7 @@ section h1 {
 }
 
 .one {
-  color: #4cc9f0;
+  color: #45575c;
 }
 
 .btn:hover {
@@ -211,10 +212,11 @@ section h1 {
 }
 
 .one:hover {
-  background-color: #4cc9f0;
+  background-color: #020202;
   -webkit-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
   -moz-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
   box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+  text-decoration: none;
 }
 
 

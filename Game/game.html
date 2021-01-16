@@ -11,6 +11,12 @@
 
     <style>
 
+        body{
+            background-image: url(mariorui.jpg), url(sony.jpg);
+            background-position: left top,  right bottom;
+            background-repeat: no-repeat;
+        }
+
 
         .box{
             width: 100px;
@@ -34,6 +40,15 @@
             }
 
 
+
+            #borderi{
+                border: 10px solid transparent;
+                padding: 15px;
+                border-image: url(sony.jpg) 20 round;
+                width:fit-content; 
+                width:-webkit-fit-content; 
+                width:-moz-fit-content;
+            }
         
 .table-wrapper{
     margin: 10px 70px 70px;
@@ -296,18 +311,28 @@ document.getElementById("demo").innerHTML =
       </tbody>
     </table>
   </div>
+  <br>
 
-<button class ="button" id="hide">Hide</button>
-<h2>Nese don qe te fshehesh rezultatin: Rezultati eshte 2-0 per player 1</h2>
+  <button class ="button" id="hide">Hide</button>
+<h2>Nese deshiron qe te fshehesh rezultatin: Rezultati eshte 2-0 per player 1</h2>
 
 
-<h1 style="text-align:center; color:#33B0FF">Per femijet e vegjel</h1>
+  <h1 style="text-align:center; color:#33B0FF">Per femijet e vegjel</h1>
 
 <div class="box" id="box1"></div>
     <div class="box" id="box2"></div>
     <div class="box" id="box3"></div>
     <div class="box" id="box4"></div>
-    <p><strong>Note:</strong> Kliko per te mbushur katroret e meposhtem dhe numero sa katror jane ne foto</p>
+    <p id="borderi"><strong>Note:</strong> Kliko per te mbushur katroret e meposhtem dhe numero sa katror jane ne foto</p>
+
+  <br>
+  <br>
+  <br>
+<br>
+<br>
+<br>
+
+
     
 
     

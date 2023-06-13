@@ -1,3 +1,0 @@
-Me daten 29/12/2020 ora rreth 23, kam bere commit homepage, about_us(te edituara) dhe footer(komplet) jo me 
-emailin tim zyrtar. Per kete arsyeje i kam fshire about_us dhe footer duke perdor "Git" dhe i kam 
-postuar serish.   
